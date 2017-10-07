@@ -18,7 +18,7 @@ public class HibernateQuery {
             tx = session.beginTransaction();
             //1 创建Query对象
             Query query= session.createQuery("from entity.User");
-            //2 调用query对象里面的方法得到结果
+            //2 调用query对象里面的方法得到结果0
             List<User> list = query.list();
             for (User user :list){
                 System.out.println(user);
@@ -78,4 +78,5 @@ public class HibernateQuery {
             tx.rollback();
         }
     }
+
 }
